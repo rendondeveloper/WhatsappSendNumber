@@ -1,0 +1,1 @@
+import 'dart:ui';class EmptyUi{  final String? title, message, image;  final VoidCallback? callback;  const EmptyUi({this.title, this.message, this.image, this.callback});}

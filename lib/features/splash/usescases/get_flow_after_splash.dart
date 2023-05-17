@@ -1,0 +1,1 @@
+import 'package:whatsappsendnumber/resources/router/path.dart';import 'package:whatsappsendnumber/resources/states/navigation/navigation_state.dart';class GetFlowAfterSplash {    NavigationState invoke(){      return  const NavigationState(target: homeNavigation);    }}

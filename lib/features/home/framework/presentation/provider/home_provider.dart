@@ -1,0 +1,1 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';import 'package:whatsappsendnumber/features/home/framework/presentation/ui_models/home_state.dart';class HomeProvider extends StateNotifier<HomeState> {  HomeProvider() : super(const HomeState());  void changePage(int index) {    state = state.copyWith(currentTab: index);  }}

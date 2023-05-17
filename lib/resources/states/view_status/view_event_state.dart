@@ -1,0 +1,1 @@
+import 'package:freezed_annotation/freezed_annotation.dart';import 'package:whatsappsendnumber/resources/models/view_status_model/view_status.dart';part 'view_event_state.freezed.dart';@freezedclass ViewEventState with _$ViewEventState{  factory ViewEventState({     @Default(EventLoading()) ViewEvent viewEvent,  }) = _ViewEventState;  const ViewEventState._();}

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:whatsappsendnumber/features/splash/presentation/page/splash_page.dart';
+import 'package:whatsappsendnumber/features/home/framework/presentation/page/home_page.dart';
+import 'package:whatsappsendnumber/features/splash/framework/page/splash_page.dart';
 
 import 'path.dart';
 
@@ -9,7 +11,7 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: initialization,
       builder: (BuildContext context, GoRouterState state) {
-        return const SplashPage();
+        return const ProviderScope(child: SplashPage());
       },
       routes: <RouteBase>[
         GoRoute(
@@ -21,7 +23,7 @@ final GoRouter router = GoRouter(
         GoRoute(
           path: home,
           builder: (BuildContext context, GoRouterState state) {
-            return Container(color: Colors.blue);
+            return const ProviderScope(child: HomePage());
           },
         )
       ],

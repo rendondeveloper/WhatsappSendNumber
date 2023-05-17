@@ -1,0 +1,1 @@
+class LoadingUi{  bool showLoader = false;  String? message;  LoadingUi({this.showLoader = false, this.message});}

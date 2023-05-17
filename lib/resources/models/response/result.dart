@@ -1,0 +1,1 @@
+class Result<T> {  T? success;  Error? error;  Result({this.success, this.error});}

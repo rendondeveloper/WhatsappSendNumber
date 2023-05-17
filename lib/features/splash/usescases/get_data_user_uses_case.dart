@@ -1,0 +1,1 @@
+import 'package:whatsappsendnumber/resources/router/path.dart';import 'package:whatsappsendnumber/resources/states/navigation/navigation_state.dart';class GetFlowAfterSplash {  Future<void> invoke() {    return Future.value();  }}

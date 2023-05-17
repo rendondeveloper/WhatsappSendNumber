@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:whatsappsendnumber/features/splash/framework/di/splash_di.dart';
 import 'package:whatsappsendnumber/resources/images_app.dart';
 
 import '../../../../resources/dimens_app.dart';
@@ -18,6 +20,8 @@ class _SplashPage extends ConsumerState<SplashPage> {
     super.initState();
     SchedulerBinding.instance.addPostFrameCallback((_) {
       initObservers();
+      ref.read(splashProvider.notifier).setUp();
+      ref.read(splashProvider.notifier).getNextFlow();
     });
   }
 
@@ -33,11 +37,17 @@ class _SplashPage extends ConsumerState<SplashPage> {
             width: double.infinity,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Image.asset(logoApp), const SizedBox(height: doubleSeparation), const CircularProgressIndicator()],
+              children: [Image.asset(logoApp, height: imageSplash, width: imageSplash,), const SizedBox(height: doubleSeparation), const CircularProgressIndicator()],
             ),
           ),
         ));
   }
 
-  initObservers() {}
+  initObservers() {
+    ref.watch(splashProvider.notifier).addListener((state) {
+      if (state.navigation.target.isNotEmpty) {
+        context.go(state.navigation.target);
+      }
+    });
+  }
 }

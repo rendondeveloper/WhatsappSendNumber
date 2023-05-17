@@ -1,3 +1,10 @@
 {
-  "appName": "Send Number Whatsapp"
+  "appName": "Send Number Whatsapp",
+  "appTitle": "Enviar mensaje a Whatsapp",
+  "tabSendMessage": "Enviar",
+  "tabList": "Historial",
+
+  "sendMessagePageInputPhone": "Escribe el número",
+  "sendMessagePageInputPhoneError": "Ingresa los 10 digítos del número telefónico",
+  "sendMessagePageButtonSendStartChat": "INICIAR CHAT"
 }

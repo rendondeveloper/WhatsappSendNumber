@@ -11,14 +11,34 @@ if (flutterRoot == null) {
     throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
-def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
-if (flutterVersionCode == null) {
-    flutterVersionCode = '1'
+def compileSdkVersionApp = localProperties.getProperty('flutter.compileSdkVersionApp')
+if (compileSdkVersionApp == null) {
+    compileSdkVersionApp = '33'
 }
 
-def flutterVersionName = localProperties.getProperty('flutter.versionName')
-if (flutterVersionName == null) {
-    flutterVersionName = '1.0'
+def versionCodeApp = localProperties.getProperty('flutter.versionCodeApp')
+if (versionCodeApp == null) {
+    versionCodeApp = '1'
+}
+
+def versionNameApp = localProperties.getProperty('flutter.versionName')
+if (versionNameApp == null) {
+    versionNameApp = '0.0.1'
+}
+
+def minSdkVersionApp = localProperties.getProperty('flutter.minSdkVersionApp')
+if (minSdkVersionApp == null) {
+    minSdkVersionApp = '19'
+}
+
+def targetSdkVersionApp = localProperties.getProperty('flutter.targetSdkVersionApp')
+if (targetSdkVersionApp == null) {
+    targetSdkVersionApp = '33'
+}
+
+def buildToolsVersionApp = localProperties.getProperty('flutter.buildToolsVersionApp')
+if (buildToolsVersionApp == null) {
+    buildToolsVersionApp = "30.0.3"
 }
 
 apply plugin: 'com.android.application'
@@ -26,8 +46,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    compileSdkVersion compileSdkVersionApp.toInteger()
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -43,22 +62,24 @@ android {
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.whatsappsendnumber"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        minSdkVersion minSdkVersionApp.toInteger()
+        targetSdkVersion targetSdkVersionApp.toInteger()
+        versionCode versionCodeApp.toInteger()
+        versionName versionNameApp
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
         }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "Instantiatable"
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
@@ -67,5 +88,7 @@ flutter {
 }
 
 dependencies {
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.core:core-splashscreen:1.0.0-alpha02"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

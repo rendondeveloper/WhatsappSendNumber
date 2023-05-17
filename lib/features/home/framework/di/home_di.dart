@@ -1,0 +1,1 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';import 'package:whatsappsendnumber/features/home/framework/presentation/provider/home_provider.dart';import 'package:whatsappsendnumber/features/home/framework/presentation/ui_models/home_state.dart';final homeProvider = StateNotifierProvider.autoDispose<HomeProvider, HomeState>((provider) {  return HomeProvider();});

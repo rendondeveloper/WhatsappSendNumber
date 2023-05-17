@@ -1,0 +1,1 @@
+import 'dart:ui';class ErrorUi{  final String title, message, image;  final VoidCallback callback;  ErrorUi(this.title, this.message, this.image, this.callback);}
