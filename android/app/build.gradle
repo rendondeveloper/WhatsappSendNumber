@@ -62,7 +62,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.whatsappsendnumber"
+        applicationId "com.kikedeveloper.whatsappsendnumber"
         minSdkVersion minSdkVersionApp.toInteger()
         targetSdkVersion targetSdkVersionApp.toInteger()
         versionCode versionCodeApp.toInteger()
