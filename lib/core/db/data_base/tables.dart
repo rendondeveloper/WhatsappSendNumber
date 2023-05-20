@@ -1,0 +1,1 @@
+//Number Phoneconst String dataBaseName = "whatsapp_number_database.db";//Number Phoneconst String numberPhoneTable = "NumberPhone";const String numberPhoneIdentifier = "id";const String numberPhoneNumber = "number";const String numberPhoneDate = "date";

@@ -1,3 +1,6 @@
-const String urlScheme = "https";
-const String urlApiWhatsapp = "api.whatsapp.com";
-const String urlApiWhatsappSend = "send?phone=";
+const String urlScheme = 'https';
+const String urlApiWhatsapp = 'api.whatsapp.com';
+const String urlApiWhatsappSend = 'send\?phone=+52';
+const String urlAppApiWhatsapp = 'https://api.whatsapp.com/send?phone=+52';
+
+

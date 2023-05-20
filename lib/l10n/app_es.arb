@@ -6,5 +6,16 @@
 
   "sendMessagePageInputPhone": "Escribe el número",
   "sendMessagePageInputPhoneError": "Ingresa los 10 digítos del número telefónico",
-  "sendMessagePageButtonSendStartChat": "INICIAR CHAT"
+  "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
+
+  "historyPageTextEmpty" : "Aun no hás iniciado un chat, cuando inicies uno podras ver el historico aquí,",
+  "historyPageTextNumberCopied" : "El número telefónico fue copiado ",
+
+  "numberCardDate" : "Fecha:",
+  "numberCardNumber" : "Número:",
+
+  "dialogDeleteNumberTitle" : "Eliminar número",
+  "dialogDeleteNumberMessage" : "¿Estás seguro de eliminar este número?",
+  "dialogDeleteNumberButtonYes" : "Eliminar",
+  "dialogDeleteNumberButtonNo" : "Cancelar"
 }

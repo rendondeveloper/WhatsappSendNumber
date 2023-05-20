@@ -1,0 +1,1 @@
+abstract class Mapper<T, E>{  E map(T input);}

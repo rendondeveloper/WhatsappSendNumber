@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:whatsappsendnumber/resources/configuration_app.dart';
 import 'package:whatsappsendnumber/resources/router/router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:whatsappsendnumber/resources/strings_app.dart';
 
 void main() {
   runApp(const FutbolApp());
@@ -27,14 +28,22 @@ class FutbolApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           brightness: Brightness.light,
+          appBarTheme: const AppBarTheme(
+            centerTitle: true,
+            titleTextStyle: TextStyle(fontSize: titleLarge, color: appBarTitle, fontWeight: FontWeight.normal)
+          ),
           primaryColorDark: primaryDarkColor,
           primaryColorLight: primaryLightColor,
           primaryColor: primaryColor,
+          errorColor: errorColor,
+          iconTheme: const IconThemeData(
+            color: iconColor
+          ),
           accentColor: accentColor,
           dividerColor: dividerColor,
           backgroundColor: background,
           cardColor: cardColor,
-          fontFamily: 'Georgia',
+          fontFamily: fontGeneral,
           textTheme: const TextTheme(
               displayLarge: TextStyle(fontSize: headlineLarge, color: primaryText, fontWeight: FontWeight.normal),
               displayMedium: TextStyle(fontSize: displayMedium, color: primaryText, fontWeight: FontWeight.normal),

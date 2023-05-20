@@ -1,0 +1,1 @@
+import 'package:freezed_annotation/freezed_annotation.dart';part 'phone_number_state.freezed.dart';@freezedclass PhoneNumberState with _$PhoneNumberState{  const factory PhoneNumberState({    @Default(0) int identifier,    @Default("") String phoneNumber,    @Default("") String date,  }) = _PhoneNumberState;  const PhoneNumberState._();}
