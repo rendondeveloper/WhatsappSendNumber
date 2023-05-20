@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -105,7 +107,7 @@ class _NumberCard extends State<NumberCard> {
               flex: 1,
               child: InkWell(
                 onTap: () {
-                  launch("$urlAppApiWhatsapp${widget.phoneNumber.phoneNumber}");
+                  launch("${Platform.isAndroid ? urlAppApiWhatsapp : urlAppApiWhatsappIOS}${widget.phoneNumber.phoneNumber}");
                 },
                 child: Material(
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(4.0), bottomRight: Radius.circular(4.0)),

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.whatsappsendnumber">
    <application
-        android:label="Send Message Easy"
+        android:label="Envía Whats Facil"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

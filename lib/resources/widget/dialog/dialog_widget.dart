@@ -24,25 +24,18 @@ void showDialogCustom(
               content: message,
               actions: <Widget>[
                 TextButton(
-                  onPressed: callbackCancel != null
-                      ? () {
-                    callbackCancel();
-                  }
-                      : () {
+                  onPressed: () {
+                    callbackCancel?.call();
                     Navigator.of(context).pop();
                   },
                   child: Text(context.strings().dialogDeleteNumberButtonNo,
                       style: textStyleButtonFlag ?? const TextStyle(fontSize: 14.0, fontStyle: FontStyle.normal, color: Colors.black)),
                 ),
                 TextButton(
-                  onPressed: callbackOk != null
-                      ? () {
-                          callbackOk();
-                          Navigator.of(context).pop();
-                        }
-                      : () {
-                          Navigator.of(context).pop();
-                        },
+                  onPressed: () {
+                    callbackOk?.call();
+                    Navigator.of(context).pop();
+                  },
                   child: Text(context.strings().dialogDeleteNumberButtonYes,
                       style: textStyleButtonFlag ?? const TextStyle(fontSize: 14.0, fontStyle: FontStyle.normal, color: Colors.black)),
                 ),
@@ -56,18 +49,15 @@ void showDialogCustom(
                     child: Text(context.strings().dialogDeleteNumberButtonNo,
                         style: textStyleButtonFlag ?? const TextStyle(fontSize: 14.0, fontStyle: FontStyle.normal, color: Colors.black)),
                     onPressed: () {
-                      final action = callbackCancel ?? Navigator.of(context).pop();
-                      action;
+                      callbackCancel?.call();
+                      Navigator.of(context).pop();
                     }),
                 CupertinoDialogAction(
                   child: Text(context.strings().dialogDeleteNumberButtonYes,
                       style: textStyleButtonFlag ?? const TextStyle(fontSize: 14.0, fontStyle: FontStyle.normal, color: Colors.black)),
                   onPressed: () {
-                    if (callbackOk != null) {
-                      callbackOk();
-                    } else {
-                      Navigator.of(context).pop();
-                    }
+                    callbackOk?.call();
+                    Navigator.of(context).pop();
                   },
                 ),
               ],
