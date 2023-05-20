@@ -7,7 +7,7 @@ class EmptyStateToRefreshWidget extends StatelessWidget {
   final Color? color;
   final bool isVisible;
 
-  const EmptyStateToRefreshWidget({required this.text, required this.icon, this.onRefresh, this.color, this.isVisible = false, Key? key})
+  const EmptyStateToRefreshWidget({required this.text, required this.icon, this.onRefresh, this.color, this.isVisible = true, Key? key})
       : super(key: key);
 
   @override
@@ -15,22 +15,38 @@ class EmptyStateToRefreshWidget extends StatelessWidget {
     return Visibility(
       visible: isVisible,
       child: Container(
+        width:
+            MediaQuery.of(context).orientation == Orientation.portrait ? MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * .90,
         alignment: Alignment.center,
-        child: RefreshIndicator(
-          onRefresh: onRefresh ?? () async {},
-          color: color ?? AppBarTheme.of(context).backgroundColor ?? Theme.of(context).colorScheme.secondary,
-          child: Wrap(
-            alignment: WrapAlignment.center,
-            children: <Widget>[
-              icon,
-              const SizedBox(height: 32.0),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 34.0),
-                child: text,
+        child: onRefresh != null
+            ? RefreshIndicator(
+                onRefresh: onRefresh ?? () async {},
+                color: color ?? AppBarTheme.of(context).backgroundColor ?? Theme.of(context).colorScheme.secondary,
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  children: <Widget>[
+                    icon,
+                    const SizedBox(height: 32.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 34.0),
+                      child: text,
+                    ),
+                  ],
+                ),
+              )
+            : SingleChildScrollView(
+                child: Wrap(
+                  alignment: WrapAlignment.center,
+                  children: <Widget>[
+                    icon,
+                    const SizedBox(height: 32.0),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 34.0),
+                      child: text,
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
-        ),
       ),
     );
   }

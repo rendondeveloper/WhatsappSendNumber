@@ -1,5 +1,6 @@
 {
   "appName": "Send Number Whatsapp",
+  "appNameEasy": "Envía Whats facil",
   "appTitle": "Enviar mensaje a Whatsapp",
   "tabSendMessage": "Enviar",
   "tabList": "Historial",
@@ -8,7 +9,7 @@
   "sendMessagePageInputPhoneError": "Ingresa los 10 digítos del número telefónico",
   "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
 
-  "historyPageTextEmpty" : "Aun no hás iniciado un chat, cuando inicies uno podras ver el historico aquí,",
+  "historyPageTextEmpty" : "Aun no hás iniciado un chat, cuando inicies uno podras ver tu historico aquí.",
   "historyPageTextNumberCopied" : "El número telefónico fue copiado ",
 
   "numberCardDate" : "Fecha:",
