@@ -1,15 +1,24 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:whatsappsendnumber/resources/configuration_app.dart';
 import 'package:whatsappsendnumber/resources/router/router.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
-void main() {
-  runApp(const FutbolApp());
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+  runApp(const MainApp());
 }
 
-class FutbolApp extends StatelessWidget {
-  const FutbolApp({super.key});
+class MainApp extends StatelessWidget {
+
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {

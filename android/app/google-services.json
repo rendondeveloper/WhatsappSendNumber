@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "303101929366",
+    "project_id": "whatsapp-send-number",
+    "storage_bucket": "whatsapp-send-number.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303101929366:android:1f8b2d831c312df9c11fb7",
+        "android_client_info": {
+          "package_name": "com.kikedeveloper.whatsappsendnumber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303101929366-9a1042vpjb44i3juo6t2vn7ftu4anger.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kikedeveloper.whatsappsendnumber",
+            "certificate_hash": "e804f1331cc639f4b7b36a48a3e06f471962eff6"
+          }
+        },
+        {
+          "client_id": "303101929366-l9l81sht2v20rck6fopvnmimk9us535f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkqChUByb5Xo9Xal-z_vZQtDNe06J9Gj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303101929366-l9l81sht2v20rck6fopvnmimk9us535f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

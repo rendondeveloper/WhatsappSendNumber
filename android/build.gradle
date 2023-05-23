@@ -1,11 +1,19 @@
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.8.0'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
+
+        //For firebase an crashlytics and analytics
+        // Add the google services classpath
+        classpath 'com.google.gms:google-services:4.3.15'
+
+        // Add the Crashlytics Gradle plugin.
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.5'
+
         classpath 'com.android.tools.build:gradle:7.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }

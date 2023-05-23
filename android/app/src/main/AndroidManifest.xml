@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kikedeveloper.whatsappsendnumber">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="Envía Whats Facil"
         android:name="${applicationName}"
@@ -13,6 +16,7 @@
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
+            android:usesCleartextTraffic="true"
             android:windowSoftInputMode="adjustResize">
 
             <meta-data

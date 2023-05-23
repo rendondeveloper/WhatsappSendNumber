@@ -1,18 +1,15 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:whatsappsendnumber/features/home/framework/presentation/ui_models/phone_number_state.dart';
 import 'package:whatsappsendnumber/resources/extensions/extension_context.dart';
-import 'package:whatsappsendnumber/resources/strings_app.dart';
 
 class NumberCard extends StatefulWidget {
   final PhoneNumberState phoneNumber;
   final Function(String) onCopy;
   final Function(int) onDelete;
+  final Function(String) onOpenChat;
 
-  const NumberCard({required this.phoneNumber, required this.onCopy, required this.onDelete, super.key});
+  const NumberCard({required this.phoneNumber, required this.onCopy, required this.onDelete, required this.onOpenChat, super.key});
 
   @override
   State<StatefulWidget> createState() {
@@ -107,7 +104,7 @@ class _NumberCard extends State<NumberCard> {
               flex: 1,
               child: InkWell(
                 onTap: () {
-                  launch("${Platform.isAndroid ? urlAppApiWhatsapp : urlAppApiWhatsappIOS}${widget.phoneNumber.phoneNumber}");
+                  widget.onOpenChat(widget.phoneNumber.phoneNumber);
                 },
                 child: Material(
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(4.0), bottomRight: Radius.circular(4.0)),

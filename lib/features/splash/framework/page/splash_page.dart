@@ -14,7 +14,7 @@ class SplashPage extends ConsumerStatefulWidget {
   _SplashPage createState() => _SplashPage();
 }
 
-class _SplashPage extends ConsumerState<SplashPage> {
+class _SplashPage extends ConsumerState<SplashPage>  {
   @override
   void initState() {
     super.initState();

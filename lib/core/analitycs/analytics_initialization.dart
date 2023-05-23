@@ -1,0 +1,1 @@
+import 'package:firebase_analytics/firebase_analytics.dart';class AnalyticsInitialization {  final FirebaseAnalytics _analytics;  AnalyticsInitialization(this._analytics);  Future<void> setUser(String? user) async {    await _analytics.setUserId(id: user);  }}
