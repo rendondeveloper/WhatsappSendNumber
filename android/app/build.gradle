@@ -81,13 +81,13 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 
     lintOptions {
         disable 'InvalidPackage'
-        disable "Instantiatable"
+        disable "Instantiatable"k
         checkReleaseBuilds false
         abortOnError false
     }
