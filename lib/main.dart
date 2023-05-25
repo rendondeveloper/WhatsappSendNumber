@@ -44,7 +44,7 @@ class MainApp extends StatelessWidget {
           fontFamily: fontGeneral,
           errorColor: errorColor,
           backgroundColor: background,
-          accentColor: accentColor,
+          //accentColor: accentColor,
           iconTheme: const IconThemeData(color: iconColor),
           appBarTheme: const AppBarTheme(
               centerTitle: true, titleTextStyle: TextStyle(fontSize: titleLarge, color: appBarTitle, fontWeight: FontWeight.normal)),
