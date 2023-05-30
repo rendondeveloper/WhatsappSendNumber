@@ -1,3 +1,4 @@
+const double simpleSmallSeparation = 4.0;
 const double simpleSeparation = 8.0;
 const double doubleSeparation = 16.0;
 

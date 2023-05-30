@@ -1,0 +1,1 @@
+class CountryDto{  final int identifier;  final String nameFull;  final String codeIso2;  final String codeIso3;  final String number;  final bool isSelected;  CountryDto(this.identifier, this.nameFull, this.codeIso2, this.codeIso3, this.number, this.isSelected);}

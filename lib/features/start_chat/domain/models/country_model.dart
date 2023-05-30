@@ -1,0 +1,1 @@
+class CountryModel {  final int identifier;  final String nameFull;  final String codeIso2;  final String codeIso3;  final String code;  CountryModel(this.identifier, this.nameFull, this.codeIso2, this.codeIso3, this.code);}

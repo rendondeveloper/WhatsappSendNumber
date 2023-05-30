@@ -1,1 +1,0 @@
-import 'package:freezed_annotation/freezed_annotation.dart';part 'send_message_state.freezed.dart';@freezedclass SendMessageState with _$SendMessageState{  const factory SendMessageState({    @Default(false) bool stateErrorInput,  }) = _SendMessageState;  const SendMessageState._();}
