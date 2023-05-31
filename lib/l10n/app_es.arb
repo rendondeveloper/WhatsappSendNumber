@@ -9,7 +9,7 @@
   "sendMessagePageInputPhoneError": "Ingresa los 10 digítos del número telefónico",
   "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
 
-  "historyPageTextEmpty" : "Aun no hás iniciado un chat, cuando inicies uno podras ver tu historico aquí.",
+  "historyPageTextEmpty" : "Cuando inicies un chat, aquí podrás consultar el histórico.",
   "historyPageTextNumberCopied" : "El número telefónico fue copiado ",
 
   "numberCardDate" : "Fecha:",
