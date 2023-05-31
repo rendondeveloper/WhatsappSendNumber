@@ -2,18 +2,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
   <ImageView
       android:id="@+id/icon_background"
-      android:layout_width="120dp"
-      android:layout_height="120dp"
-      android:contentDescription="string"
+      android:layout_width="192dp"
+      android:layout_height="192dp"
+      android:contentDescription="@string/androidx_startup"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:srcCompat="@drawable/ic_launcher" />
+      app:srcCompat="@drawable/launch_background" />
 
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="160dp"
+      android:layout_height="160dp"
+      android:layout_marginBottom="6dp"
+      android:contentDescription="@string/androidx_startup"
+      app:layout_constraintBottom_toBottomOf="@+id/icon_background"
+      app:layout_constraintEnd_toEndOf="@+id/icon_background"
+      app:layout_constraintStart_toStartOf="@+id/icon_background"
+      app:layout_constraintTop_toTopOf="@+id/icon_background"
+      app:srcCompat="@drawable/launch_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>
