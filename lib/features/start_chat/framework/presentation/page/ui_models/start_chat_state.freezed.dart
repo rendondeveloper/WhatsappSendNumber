@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$StartChatState {
   bool get stateErrorInput => throw _privateConstructorUsedError;
+  String get numberToLaunch => throw _privateConstructorUsedError;
   List<CountryState> get countries => throw _privateConstructorUsedError;
   CountryState get country => throw _privateConstructorUsedError;
 
@@ -33,6 +34,7 @@ abstract class $StartChatStateCopyWith<$Res> {
   @useResult
   $Res call(
       {bool stateErrorInput,
+      String numberToLaunch,
       List<CountryState> countries,
       CountryState country});
 
@@ -53,6 +55,7 @@ class _$StartChatStateCopyWithImpl<$Res, $Val extends StartChatState>
   @override
   $Res call({
     Object? stateErrorInput = null,
+    Object? numberToLaunch = null,
     Object? countries = null,
     Object? country = null,
   }) {
@@ -61,6 +64,10 @@ class _$StartChatStateCopyWithImpl<$Res, $Val extends StartChatState>
           ? _value.stateErrorInput
           : stateErrorInput // ignore: cast_nullable_to_non_nullable
               as bool,
+      numberToLaunch: null == numberToLaunch
+          ? _value.numberToLaunch
+          : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
       countries: null == countries
           ? _value.countries
           : countries // ignore: cast_nullable_to_non_nullable
@@ -91,6 +98,7 @@ abstract class _$$_StartChatStateCopyWith<$Res>
   @useResult
   $Res call(
       {bool stateErrorInput,
+      String numberToLaunch,
       List<CountryState> countries,
       CountryState country});
 
@@ -110,6 +118,7 @@ class __$$_StartChatStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? stateErrorInput = null,
+    Object? numberToLaunch = null,
     Object? countries = null,
     Object? country = null,
   }) {
@@ -118,6 +127,10 @@ class __$$_StartChatStateCopyWithImpl<$Res>
           ? _value.stateErrorInput
           : stateErrorInput // ignore: cast_nullable_to_non_nullable
               as bool,
+      numberToLaunch: null == numberToLaunch
+          ? _value.numberToLaunch
+          : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
       countries: null == countries
           ? _value._countries
           : countries // ignore: cast_nullable_to_non_nullable
@@ -135,6 +148,7 @@ class __$$_StartChatStateCopyWithImpl<$Res>
 class _$_StartChatState extends _StartChatState {
   const _$_StartChatState(
       {this.stateErrorInput = false,
+      this.numberToLaunch = "",
       final List<CountryState> countries = const [],
       this.country = const CountryState()})
       : _countries = countries,
@@ -143,6 +157,9 @@ class _$_StartChatState extends _StartChatState {
   @override
   @JsonKey()
   final bool stateErrorInput;
+  @override
+  @JsonKey()
+  final String numberToLaunch;
   final List<CountryState> _countries;
   @override
   @JsonKey()
@@ -158,7 +175,7 @@ class _$_StartChatState extends _StartChatState {
 
   @override
   String toString() {
-    return 'StartChatState(stateErrorInput: $stateErrorInput, countries: $countries, country: $country)';
+    return 'StartChatState(stateErrorInput: $stateErrorInput, numberToLaunch: $numberToLaunch, countries: $countries, country: $country)';
   }
 
   @override
@@ -168,13 +185,15 @@ class _$_StartChatState extends _StartChatState {
             other is _$_StartChatState &&
             (identical(other.stateErrorInput, stateErrorInput) ||
                 other.stateErrorInput == stateErrorInput) &&
+            (identical(other.numberToLaunch, numberToLaunch) ||
+                other.numberToLaunch == numberToLaunch) &&
             const DeepCollectionEquality()
                 .equals(other._countries, _countries) &&
             (identical(other.country, country) || other.country == country));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, stateErrorInput,
+  int get hashCode => Object.hash(runtimeType, stateErrorInput, numberToLaunch,
       const DeepCollectionEquality().hash(_countries), country);
 
   @JsonKey(ignore: true)
@@ -187,12 +206,15 @@ class _$_StartChatState extends _StartChatState {
 abstract class _StartChatState extends StartChatState {
   const factory _StartChatState(
       {final bool stateErrorInput,
+      final String numberToLaunch,
       final List<CountryState> countries,
       final CountryState country}) = _$_StartChatState;
   const _StartChatState._() : super._();
 
   @override
   bool get stateErrorInput;
+  @override
+  String get numberToLaunch;
   @override
   List<CountryState> get countries;
   @override

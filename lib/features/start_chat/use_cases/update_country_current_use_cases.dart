@@ -1,0 +1,1 @@
+import 'package:whatsappsendnumber/features/start_chat/data/repository/country_repository.dart';class UpdateCountryCurrentUseCases {  final CountryRepository _countriesRepository;  UpdateCountryCurrentUseCases(this._countriesRepository);  Future<void> invoke(int identifier) => _countriesRepository.updateCurrentCountry(identifier);}

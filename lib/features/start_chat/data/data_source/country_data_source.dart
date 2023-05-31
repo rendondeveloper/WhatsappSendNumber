@@ -1,1 +1,1 @@
-import 'package:whatsappsendnumber/features/start_chat/domain/models/country_model.dart';abstract class CountryDataSource{  Future<CountryModel> getCountryCurrent();}
+import 'package:whatsappsendnumber/features/start_chat/domain/models/country_model.dart';abstract class CountryDataSource{  Future<CountryModel> getCountryCurrent();  Future<List<CountryModel>> getCountries();  Future<void> updateCurrentCountry(int identifier);}
