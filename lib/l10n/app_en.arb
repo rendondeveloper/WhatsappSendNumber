@@ -6,7 +6,7 @@
   "tabList": "Historial",
 
   "sendMessagePageInputPhone": "Escribe el número",
-  "sendMessagePageInputPhoneError": "Ingresa los 10 digítos del número telefónico",
+  "sendMessagePageInputPhoneError": "Debe ingresar el número telefónico",
   "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
 
   "historyPageTextEmpty" : "Cuando inicies un chat, aquí podrás consultar el histórico.",
