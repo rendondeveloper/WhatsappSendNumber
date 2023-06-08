@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$StartChatState {
   bool get stateErrorInput => throw _privateConstructorUsedError;
   String get numberToLaunch => throw _privateConstructorUsedError;
+  String get numberCopied => throw _privateConstructorUsedError;
+  String get messageError => throw _privateConstructorUsedError;
   MessageShortState get message => throw _privateConstructorUsedError;
   List<CountryState> get countries => throw _privateConstructorUsedError;
   CountryState get country => throw _privateConstructorUsedError;
@@ -36,6 +38,8 @@ abstract class $StartChatStateCopyWith<$Res> {
   $Res call(
       {bool stateErrorInput,
       String numberToLaunch,
+      String numberCopied,
+      String messageError,
       MessageShortState message,
       List<CountryState> countries,
       CountryState country});
@@ -59,6 +63,8 @@ class _$StartChatStateCopyWithImpl<$Res, $Val extends StartChatState>
   $Res call({
     Object? stateErrorInput = null,
     Object? numberToLaunch = null,
+    Object? numberCopied = null,
+    Object? messageError = null,
     Object? message = null,
     Object? countries = null,
     Object? country = null,
@@ -71,6 +77,14 @@ class _$StartChatStateCopyWithImpl<$Res, $Val extends StartChatState>
       numberToLaunch: null == numberToLaunch
           ? _value.numberToLaunch
           : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberCopied: null == numberCopied
+          ? _value.numberCopied
+          : numberCopied // ignore: cast_nullable_to_non_nullable
+              as String,
+      messageError: null == messageError
+          ? _value.messageError
+          : messageError // ignore: cast_nullable_to_non_nullable
               as String,
       message: null == message
           ? _value.message
@@ -115,6 +129,8 @@ abstract class _$$_StartChatStateCopyWith<$Res>
   $Res call(
       {bool stateErrorInput,
       String numberToLaunch,
+      String numberCopied,
+      String messageError,
       MessageShortState message,
       List<CountryState> countries,
       CountryState country});
@@ -138,6 +154,8 @@ class __$$_StartChatStateCopyWithImpl<$Res>
   $Res call({
     Object? stateErrorInput = null,
     Object? numberToLaunch = null,
+    Object? numberCopied = null,
+    Object? messageError = null,
     Object? message = null,
     Object? countries = null,
     Object? country = null,
@@ -150,6 +168,14 @@ class __$$_StartChatStateCopyWithImpl<$Res>
       numberToLaunch: null == numberToLaunch
           ? _value.numberToLaunch
           : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
+      numberCopied: null == numberCopied
+          ? _value.numberCopied
+          : numberCopied // ignore: cast_nullable_to_non_nullable
+              as String,
+      messageError: null == messageError
+          ? _value.messageError
+          : messageError // ignore: cast_nullable_to_non_nullable
               as String,
       message: null == message
           ? _value.message
@@ -173,6 +199,8 @@ class _$_StartChatState extends _StartChatState {
   const _$_StartChatState(
       {this.stateErrorInput = false,
       this.numberToLaunch = "",
+      this.numberCopied = "",
+      this.messageError = "",
       this.message = const MessageShortState(),
       final List<CountryState> countries = const [],
       this.country = const CountryState()})
@@ -185,6 +213,12 @@ class _$_StartChatState extends _StartChatState {
   @override
   @JsonKey()
   final String numberToLaunch;
+  @override
+  @JsonKey()
+  final String numberCopied;
+  @override
+  @JsonKey()
+  final String messageError;
   @override
   @JsonKey()
   final MessageShortState message;
@@ -203,7 +237,7 @@ class _$_StartChatState extends _StartChatState {
 
   @override
   String toString() {
-    return 'StartChatState(stateErrorInput: $stateErrorInput, numberToLaunch: $numberToLaunch, message: $message, countries: $countries, country: $country)';
+    return 'StartChatState(stateErrorInput: $stateErrorInput, numberToLaunch: $numberToLaunch, numberCopied: $numberCopied, messageError: $messageError, message: $message, countries: $countries, country: $country)';
   }
 
   @override
@@ -215,6 +249,10 @@ class _$_StartChatState extends _StartChatState {
                 other.stateErrorInput == stateErrorInput) &&
             (identical(other.numberToLaunch, numberToLaunch) ||
                 other.numberToLaunch == numberToLaunch) &&
+            (identical(other.numberCopied, numberCopied) ||
+                other.numberCopied == numberCopied) &&
+            (identical(other.messageError, messageError) ||
+                other.messageError == messageError) &&
             (identical(other.message, message) || other.message == message) &&
             const DeepCollectionEquality()
                 .equals(other._countries, _countries) &&
@@ -222,8 +260,15 @@ class _$_StartChatState extends _StartChatState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, stateErrorInput, numberToLaunch,
-      message, const DeepCollectionEquality().hash(_countries), country);
+  int get hashCode => Object.hash(
+      runtimeType,
+      stateErrorInput,
+      numberToLaunch,
+      numberCopied,
+      messageError,
+      message,
+      const DeepCollectionEquality().hash(_countries),
+      country);
 
   @JsonKey(ignore: true)
   @override
@@ -236,6 +281,8 @@ abstract class _StartChatState extends StartChatState {
   const factory _StartChatState(
       {final bool stateErrorInput,
       final String numberToLaunch,
+      final String numberCopied,
+      final String messageError,
       final MessageShortState message,
       final List<CountryState> countries,
       final CountryState country}) = _$_StartChatState;
@@ -245,6 +292,10 @@ abstract class _StartChatState extends StartChatState {
   bool get stateErrorInput;
   @override
   String get numberToLaunch;
+  @override
+  String get numberCopied;
+  @override
+  String get messageError;
   @override
   MessageShortState get message;
   @override
