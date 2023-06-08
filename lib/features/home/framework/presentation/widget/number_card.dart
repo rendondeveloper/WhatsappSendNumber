@@ -7,7 +7,7 @@ class NumberCard extends StatefulWidget {
   final PhoneNumberState phoneNumber;
   final Function(String) onCopy;
   final Function(int) onDelete;
-  final Function(String) onOpenChat;
+  final Function(String, String) onOpenChat;
 
   const NumberCard({required this.phoneNumber, required this.onCopy, required this.onDelete, required this.onOpenChat, super.key});
 
@@ -18,7 +18,7 @@ class NumberCard extends StatefulWidget {
 }
 
 class _NumberCard extends State<NumberCard> {
-  final _sizeHeight = 62.0;
+  final _sizeHeight = 106.0;
 
   @override
   void initState() {
@@ -54,6 +54,18 @@ class _NumberCard extends State<NumberCard> {
       ],
     );
 
+    final message = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(context.strings().numberCardMessage, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: Colors.lightBlueAccent)),
+        const SizedBox(width: 16.0),
+        SizedBox(
+            width: 190.0,
+            child: Text(widget.phoneNumber.message,
+                maxLines: 4, overflow: TextOverflow.ellipsis, style: Theme.of(context).textTheme.labelLarge?.copyWith(fontWeight: FontWeight.bold))),
+      ],
+    );
+
     final body = SizedBox(
       height: _sizeHeight,
       child: Row(
@@ -62,7 +74,7 @@ class _NumberCard extends State<NumberCard> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [date, number],
+              children: [date, number, message],
             ),
           ),
           Expanded(
@@ -77,7 +89,7 @@ class _NumberCard extends State<NumberCard> {
                 child: Container(
                   height: _sizeHeight,
                   color: context.errorColor() ?? Colors.red,
-                  child: Icon(Icons.delete, size: _sizeHeight - 30.0, color: Theme.of(context).iconTheme.color),
+                  child: Icon(Icons.delete, size: _sizeHeight - 60.0, color: Theme.of(context).iconTheme.color),
                 ),
               ),
             ),
@@ -95,7 +107,7 @@ class _NumberCard extends State<NumberCard> {
                 child: Container(
                   height: _sizeHeight,
                   color: context.dividerColor() ?? Colors.red,
-                  child: Icon(Icons.copy, size: _sizeHeight - 30.0, color: Theme.of(context).iconTheme.color),
+                  child: Icon(Icons.copy, size: _sizeHeight - 60.0, color: Theme.of(context).iconTheme.color),
                 ),
               ),
             ),
@@ -104,7 +116,7 @@ class _NumberCard extends State<NumberCard> {
               flex: 1,
               child: InkWell(
                 onTap: () {
-                  widget.onOpenChat(widget.phoneNumber.phoneNumber);
+                  widget.onOpenChat(widget.phoneNumber.phoneNumber, widget.phoneNumber.message);
                 },
                 child: Material(
                   borderRadius: const BorderRadius.only(topRight: Radius.circular(4.0), bottomRight: Radius.circular(4.0)),
@@ -114,7 +126,7 @@ class _NumberCard extends State<NumberCard> {
                     decoration: BoxDecoration(
                         color: context.primaryColor() ?? Colors.white,
                         borderRadius: const BorderRadius.only(topRight: Radius.circular(4.0), bottomRight: Radius.circular(4.0))),
-                    child: Icon(Icons.send, size: _sizeHeight - 30.0, color: Theme.of(context).iconTheme.color),
+                    child: Icon(Icons.send, size: _sizeHeight - 60.0, color: Theme.of(context).iconTheme.color),
                   ),
                 ),
               ))

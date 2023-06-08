@@ -1,0 +1,1 @@
+import 'package:whatsappsendnumber/features/start_chat/domain/models/message_short_model.dart';abstract class MessageShortDataSource{  Future<MessageShortModel> getMessageShort();  Future<void> updateMessageShort(MessageShortModel messageModel);}

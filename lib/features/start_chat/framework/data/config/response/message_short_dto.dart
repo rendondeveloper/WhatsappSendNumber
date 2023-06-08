@@ -1,0 +1,1 @@
+class MessageShortDto{  final int identifier;  final String message;  MessageShortDto(this.identifier, this.message);}

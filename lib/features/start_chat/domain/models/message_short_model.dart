@@ -1,0 +1,1 @@
+class MessageShortModel {  final int identifier;  final String message;  MessageShortModel(this.identifier, this.message);}

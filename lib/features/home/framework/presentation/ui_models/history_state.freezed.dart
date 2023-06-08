@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$HistoryState {
   List<PhoneNumberState> get numberPhones => throw _privateConstructorUsedError;
+  String get numberToLaunch => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HistoryStateCopyWith<HistoryState> get copyWith =>
@@ -29,7 +30,7 @@ abstract class $HistoryStateCopyWith<$Res> {
           HistoryState value, $Res Function(HistoryState) then) =
       _$HistoryStateCopyWithImpl<$Res, HistoryState>;
   @useResult
-  $Res call({List<PhoneNumberState> numberPhones});
+  $Res call({List<PhoneNumberState> numberPhones, String numberToLaunch});
 }
 
 /// @nodoc
@@ -46,12 +47,17 @@ class _$HistoryStateCopyWithImpl<$Res, $Val extends HistoryState>
   @override
   $Res call({
     Object? numberPhones = null,
+    Object? numberToLaunch = null,
   }) {
     return _then(_value.copyWith(
       numberPhones: null == numberPhones
           ? _value.numberPhones
           : numberPhones // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumberState>,
+      numberToLaunch: null == numberToLaunch
+          ? _value.numberToLaunch
+          : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -64,7 +70,7 @@ abstract class _$$_HistoryStateCopyWith<$Res>
       __$$_HistoryStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<PhoneNumberState> numberPhones});
+  $Res call({List<PhoneNumberState> numberPhones, String numberToLaunch});
 }
 
 /// @nodoc
@@ -79,12 +85,17 @@ class __$$_HistoryStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? numberPhones = null,
+    Object? numberToLaunch = null,
   }) {
     return _then(_$_HistoryState(
       numberPhones: null == numberPhones
           ? _value._numberPhones
           : numberPhones // ignore: cast_nullable_to_non_nullable
               as List<PhoneNumberState>,
+      numberToLaunch: null == numberToLaunch
+          ? _value.numberToLaunch
+          : numberToLaunch // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -92,7 +103,9 @@ class __$$_HistoryStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_HistoryState extends _HistoryState {
-  const _$_HistoryState({final List<PhoneNumberState> numberPhones = const []})
+  const _$_HistoryState(
+      {final List<PhoneNumberState> numberPhones = const [],
+      this.numberToLaunch = ""})
       : _numberPhones = numberPhones,
         super._();
 
@@ -106,8 +119,12 @@ class _$_HistoryState extends _HistoryState {
   }
 
   @override
+  @JsonKey()
+  final String numberToLaunch;
+
+  @override
   String toString() {
-    return 'HistoryState(numberPhones: $numberPhones)';
+    return 'HistoryState(numberPhones: $numberPhones, numberToLaunch: $numberToLaunch)';
   }
 
   @override
@@ -116,12 +133,14 @@ class _$_HistoryState extends _HistoryState {
         (other.runtimeType == runtimeType &&
             other is _$_HistoryState &&
             const DeepCollectionEquality()
-                .equals(other._numberPhones, _numberPhones));
+                .equals(other._numberPhones, _numberPhones) &&
+            (identical(other.numberToLaunch, numberToLaunch) ||
+                other.numberToLaunch == numberToLaunch));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_numberPhones));
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_numberPhones), numberToLaunch);
 
   @JsonKey(ignore: true)
   @override
@@ -131,12 +150,15 @@ class _$_HistoryState extends _HistoryState {
 }
 
 abstract class _HistoryState extends HistoryState {
-  const factory _HistoryState({final List<PhoneNumberState> numberPhones}) =
-      _$_HistoryState;
+  const factory _HistoryState(
+      {final List<PhoneNumberState> numberPhones,
+      final String numberToLaunch}) = _$_HistoryState;
   const _HistoryState._() : super._();
 
   @override
   List<PhoneNumberState> get numberPhones;
+  @override
+  String get numberToLaunch;
   @override
   @JsonKey(ignore: true)
   _$$_HistoryStateCopyWith<_$_HistoryState> get copyWith =>

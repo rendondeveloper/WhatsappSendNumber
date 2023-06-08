@@ -8,6 +8,7 @@ class MapPhoneNumberLocalToPhoneNumberState implements Mapper<PhoneNumber, Phone
     return PhoneNumberState(
       identifier: input.identifier,
       phoneNumber: input.number,
+      message: input.message,
       date: input.date,
     );
   }

@@ -18,6 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PhoneNumberState {
   int get identifier => throw _privateConstructorUsedError;
   String get phoneNumber => throw _privateConstructorUsedError;
+  String get message => throw _privateConstructorUsedError;
   String get date => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -31,7 +32,7 @@ abstract class $PhoneNumberStateCopyWith<$Res> {
           PhoneNumberState value, $Res Function(PhoneNumberState) then) =
       _$PhoneNumberStateCopyWithImpl<$Res, PhoneNumberState>;
   @useResult
-  $Res call({int identifier, String phoneNumber, String date});
+  $Res call({int identifier, String phoneNumber, String message, String date});
 }
 
 /// @nodoc
@@ -49,6 +50,7 @@ class _$PhoneNumberStateCopyWithImpl<$Res, $Val extends PhoneNumberState>
   $Res call({
     Object? identifier = null,
     Object? phoneNumber = null,
+    Object? message = null,
     Object? date = null,
   }) {
     return _then(_value.copyWith(
@@ -59,6 +61,10 @@ class _$PhoneNumberStateCopyWithImpl<$Res, $Val extends PhoneNumberState>
       phoneNumber: null == phoneNumber
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
@@ -76,7 +82,7 @@ abstract class _$$_PhoneNumberStateCopyWith<$Res>
       __$$_PhoneNumberStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int identifier, String phoneNumber, String date});
+  $Res call({int identifier, String phoneNumber, String message, String date});
 }
 
 /// @nodoc
@@ -92,6 +98,7 @@ class __$$_PhoneNumberStateCopyWithImpl<$Res>
   $Res call({
     Object? identifier = null,
     Object? phoneNumber = null,
+    Object? message = null,
     Object? date = null,
   }) {
     return _then(_$_PhoneNumberState(
@@ -102,6 +109,10 @@ class __$$_PhoneNumberStateCopyWithImpl<$Res>
       phoneNumber: null == phoneNumber
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
@@ -115,7 +126,10 @@ class __$$_PhoneNumberStateCopyWithImpl<$Res>
 
 class _$_PhoneNumberState extends _PhoneNumberState {
   const _$_PhoneNumberState(
-      {this.identifier = 0, this.phoneNumber = "", this.date = ""})
+      {this.identifier = 0,
+      this.phoneNumber = "",
+      this.message = "",
+      this.date = ""})
       : super._();
 
   @override
@@ -126,11 +140,14 @@ class _$_PhoneNumberState extends _PhoneNumberState {
   final String phoneNumber;
   @override
   @JsonKey()
+  final String message;
+  @override
+  @JsonKey()
   final String date;
 
   @override
   String toString() {
-    return 'PhoneNumberState(identifier: $identifier, phoneNumber: $phoneNumber, date: $date)';
+    return 'PhoneNumberState(identifier: $identifier, phoneNumber: $phoneNumber, message: $message, date: $date)';
   }
 
   @override
@@ -142,11 +159,13 @@ class _$_PhoneNumberState extends _PhoneNumberState {
                 other.identifier == identifier) &&
             (identical(other.phoneNumber, phoneNumber) ||
                 other.phoneNumber == phoneNumber) &&
+            (identical(other.message, message) || other.message == message) &&
             (identical(other.date, date) || other.date == date));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, identifier, phoneNumber, date);
+  int get hashCode =>
+      Object.hash(runtimeType, identifier, phoneNumber, message, date);
 
   @JsonKey(ignore: true)
   @override
@@ -159,6 +178,7 @@ abstract class _PhoneNumberState extends PhoneNumberState {
   const factory _PhoneNumberState(
       {final int identifier,
       final String phoneNumber,
+      final String message,
       final String date}) = _$_PhoneNumberState;
   const _PhoneNumberState._() : super._();
 
@@ -166,6 +186,8 @@ abstract class _PhoneNumberState extends PhoneNumberState {
   int get identifier;
   @override
   String get phoneNumber;
+  @override
+  String get message;
   @override
   String get date;
   @override

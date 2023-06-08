@@ -6,6 +6,7 @@
   "tabList": "Historial",
 
   "sendMessagePageInputPhone": "Escribe el número",
+  "sendMessagePageInputText": "Escribe un mensaje corto",
   "sendMessagePageInputPhoneError": "Debe ingresar el número telefónico",
   "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
 
@@ -14,6 +15,7 @@
 
   "numberCardDate" : "Fecha:",
   "numberCardNumber" : "Número:",
+  "numberCardMessage" : "Mensaje:",
 
   "dialogDeleteNumberTitle" : "Eliminar número",
   "dialogDeleteNumberMessage" : "¿Estás seguro de eliminar este número?",
