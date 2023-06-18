@@ -1,0 +1,1 @@
+import 'package:whatsappsendnumber/features/start_chat/framework/data/config/response/country_dto.dart';abstract class CountriesLocalDataSource {  Future<List<CountryDto>> getCountries();  Future<bool> insertCountries(List<CountryDto> list);}

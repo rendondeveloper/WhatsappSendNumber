@@ -237,7 +237,7 @@ class _$_StartChatState extends _StartChatState {
 
   @override
   String toString() {
-    return 'StartChatState(stateErrorInput: $stateErrorInput, numberToLaunch: $numberToLaunch, numberCopied: $numberCopied, messageError: $messageError, message: $message, countries: $countries, country: $country)';
+    return 'StartChatState(stateErrorInput: $stateErrorInput, numberToLaunch: $numberToLaunch, numberCopied: $numberCopied, messageError: $messageError, message: $message, countries.json: $countries, country: $country)';
   }
 
   @override

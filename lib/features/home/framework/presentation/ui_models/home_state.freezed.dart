@@ -16,6 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeState {
+  ViewStatus get status => throw _privateConstructorUsedError;
   int get currentTab => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -28,7 +29,7 @@ abstract class $HomeStateCopyWith<$Res> {
   factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
-  $Res call({int currentTab});
+  $Res call({ViewStatus status, int currentTab});
 }
 
 /// @nodoc
@@ -44,9 +45,14 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? status = null,
     Object? currentTab = null,
   }) {
     return _then(_value.copyWith(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ViewStatus,
       currentTab: null == currentTab
           ? _value.currentTab
           : currentTab // ignore: cast_nullable_to_non_nullable
@@ -62,7 +68,7 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
       __$$_HomeStateCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int currentTab});
+  $Res call({ViewStatus status, int currentTab});
 }
 
 /// @nodoc
@@ -76,9 +82,14 @@ class __$$_HomeStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? status = null,
     Object? currentTab = null,
   }) {
     return _then(_$_HomeState(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as ViewStatus,
       currentTab: null == currentTab
           ? _value.currentTab
           : currentTab // ignore: cast_nullable_to_non_nullable
@@ -90,15 +101,19 @@ class __$$_HomeStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_HomeState extends _HomeState {
-  const _$_HomeState({this.currentTab = 0}) : super._();
+  const _$_HomeState({this.status = ViewStatus.loading, this.currentTab = 0})
+      : super._();
 
+  @override
+  @JsonKey()
+  final ViewStatus status;
   @override
   @JsonKey()
   final int currentTab;
 
   @override
   String toString() {
-    return 'HomeState(currentTab: $currentTab)';
+    return 'HomeState(status: $status, currentTab: $currentTab)';
   }
 
   @override
@@ -106,12 +121,13 @@ class _$_HomeState extends _HomeState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_HomeState &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.currentTab, currentTab) ||
                 other.currentTab == currentTab));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, currentTab);
+  int get hashCode => Object.hash(runtimeType, status, currentTab);
 
   @JsonKey(ignore: true)
   @override
@@ -121,9 +137,12 @@ class _$_HomeState extends _HomeState {
 }
 
 abstract class _HomeState extends HomeState {
-  const factory _HomeState({final int currentTab}) = _$_HomeState;
+  const factory _HomeState({final ViewStatus status, final int currentTab}) =
+      _$_HomeState;
   const _HomeState._() : super._();
 
+  @override
+  ViewStatus get status;
   @override
   int get currentTab;
   @override

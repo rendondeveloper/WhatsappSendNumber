@@ -9,6 +9,7 @@
   "sendMessagePageInputText": "Escribe un mensaje corto",
   "sendMessagePageInputPhoneError": "Debe ingresar el número telefónico",
   "sendMessagePageInputCopiedPhoneError": "Se intento copiar un dato que no cumple con el formato esperado",
+  "sendMessagePageLoaderDownloadCountry": "Cargando las claves lada",
   "sendMessagePageButtonSendStartChat": "INICIAR CHAT",
 
   "historyPageTextEmpty" : "Cuando inicies un chat, aquí podrás consultar el histórico.",
