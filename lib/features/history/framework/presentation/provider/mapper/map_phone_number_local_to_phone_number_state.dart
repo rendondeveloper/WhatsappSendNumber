@@ -1,4 +1,4 @@
-import 'package:whatsappsendnumber/core/db/features/number_phone_data_base/domain/phone_number.dart';
+import 'package:whatsappsendnumber/features/history/domain/models/phone_number.dart';
 import 'package:whatsappsendnumber/features/home/framework/presentation/ui_models/phone_number_state.dart';
 import 'package:whatsappsendnumber/resources/utils/interface/mapper.dart';
 

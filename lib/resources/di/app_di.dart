@@ -1,0 +1,1 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';import 'package:whatsappsendnumber/core/db/data_base/data_base.dart';final dataBaseProvider = Provider((provider) => DataBaseLocal());

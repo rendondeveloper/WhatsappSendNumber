@@ -1,4 +1,4 @@
-import 'package:whatsappsendnumber/core/db/features/number_phone_data_base/domain/phone_number.dart';
+import 'package:whatsappsendnumber/features/history/domain/models/phone_number.dart';
 
 class PhoneNumberOutPut {
   List<PhoneNumber> phoneNumbers;

@@ -1,0 +1,1 @@
+import 'dart:async';import 'package:whatsappsendnumber/features/history/data/phone_number_local_repository.dart';class DeleteAllPhoneNumberUsesCases {  final PhoneNumberRepository _phoneNumberRepository;  DeleteAllPhoneNumberUsesCases(this._phoneNumberRepository);  Future<void> invoke() async {    await _phoneNumberRepository.deleteAllPhoneNumber();  }}
