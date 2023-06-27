@@ -27,7 +27,7 @@ if (versionCodeApp == null) {
     versionCodeApp = '1'
 }
 
-def versionNameApp = localProperties.getProperty('flutter.versionName')
+def versionNameApp = localProperties.getProperty('flutter.versionNameApp')
 if (versionNameApp == null) {
     versionNameApp = '0.0.1'
 }
