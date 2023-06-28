@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -11,11 +13,13 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  MobileAds.instance.initialize();
-  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  runApp(const MainApp());
+  runZonedGuarded<Future<void>>(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+    MobileAds.instance.initialize();
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+    runApp(const MainApp());
+  }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
 class MainApp extends StatelessWidget {
