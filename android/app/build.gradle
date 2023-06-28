@@ -71,8 +71,8 @@ android {
         applicationId "com.kikedeveloper.whatsappsendnumber"
         minSdkVersion minSdkVersionApp.toInteger()
         targetSdkVersion targetSdkVersionApp.toInteger()
-        versionCode versionCodeApp.toInteger()
-        versionName versionNameApp
+        versionCode 10
+        versionName "1.0.4"
         multiDexEnabled true
     }
 
