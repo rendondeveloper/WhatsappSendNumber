@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.kikedeveloper.whatsappsendnumber
+package com.example.whatsappsendnumber
 
 import androidx.core.animation.doOnEnd
 import android.animation.AnimatorSet
